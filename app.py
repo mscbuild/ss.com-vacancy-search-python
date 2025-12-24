@@ -156,3 +156,4 @@ status_bar = ttk.Label(root, textvariable=status, anchor="w")
 status_bar.pack(fill="x")
 
 root.mainloop()
+
