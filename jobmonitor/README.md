@@ -41,18 +41,6 @@ job_monitor/
 
 # ⚙️ 2️⃣ config.py  
 
-~~~bash
-BASE_URL = "https://www.ss.com"
-START_URL = "https://www.ss.com/ru/work/are-required/programmer/"
-
-HEADERS = {"User-Agent": "Mozilla/5.0"}
-
-TELEGRAM_TOKEN = "YOUR_TOKEN"
-CHAT_ID = "YOUR_CHAT_ID"
-
-CHECK_INTERVAL = 1800  # 30 минут
-~~~
-
 # 🧠 3️⃣ parser.py — parsing logic
 
 # 💾 4️⃣ storage.py - protection against duplicates + CSV
