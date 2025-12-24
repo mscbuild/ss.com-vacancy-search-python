@@ -1,6 +1,4 @@
-# 🏆 Job Monitor - GUI + Telegram job parser
-
-# 🔥 Python Job Monitor
+# 🏆 Python Job Monitor - GUI + Telegram job parser
 
 Developed a GUI application for monitoring job openings with web parsing, Telegram notifications, and automatic data updates. Used Python, BeautifulSoup, Tkinter, and a REST API.
 
@@ -85,10 +83,18 @@ CHECK_INTERVAL = 1800  # 30 минут
 
 - Tkinter
 
+- Telegram Bot API
+
 ## Launch
 
 ~~~bash
 pip install -r requirements.txt
 python app.py
 ~~~
-- Telegram Bot API
+
+## 🏗️ 5️⃣ Build into a single EXE
+
+# License
+
+This project is licensed under the MIT License.
+ 
