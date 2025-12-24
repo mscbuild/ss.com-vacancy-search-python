@@ -3,10 +3,15 @@
 A full-fledged GUI application in Python (Tkinter) with ALL the requested improvements:
 
 ✅ Keyword search
+
 ✅ Minimum wage filter
+
 ✅ Load all pages
+
 ✅ Save as CSV
+
 ✅ Dark theme
+
 ✅ Double-click → Open job posting in browser
 
 # 📦 Installing libraries
