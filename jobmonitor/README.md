@@ -92,7 +92,7 @@ pip install -r requirements.txt
 python app.py
 ~~~
 
-## 🏗️ 5️⃣ Build into a single EXE
+## 🏗️ 7️⃣ Build into a single EXE
 
 ~~~bash
 pyinstaller --onefile --windowed app.py
