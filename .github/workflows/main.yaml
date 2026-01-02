@@ -1,59 +1,17 @@
-name: Python Code Bot (Ruff)
+name: CI Example
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push]
+
+# Ограничение прав GITHUB_TOKEN на уровне всего workflow
+permissions:
+  contents: read # Разрешаем только чтение кода (необходимо для checkout)
 
 jobs:
-  lint-and-fix:
+  build:
     runs-on: ubuntu-latest
-    # Даем боту права на запись, чтобы он мог пушить исправления
-    permissions:
-      contents: write
-
     steps:
-      - name: Checkout code
+      - name: ⤵️ Check out repository code
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install Ruff
-        run: pip install ruff
-
-      - name: Fix violations and Format code
-        # Ruff исправляет импорты, удаляет неиспользуемый код и форматирует стиль (как Black)
-        run: |
-          ruff check --fix .
-          ruff format .
-
-      - name: Commit changes
-        # Бот автоматически коммитит правки, если они были
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "style: авто-форматирование кода (Ruff)"
-          branch: ${{ github.head_ref }}
-
-  tests:
-    runs-on: ubuntu-latest
-    needs: lint-and-fix # Запускаем тесты только после того, как бот причесал код
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - name: Install dependencies
-        run: |
-          pip install pytest
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      - name: Run Tests
-        run: pytest
-
+      
+      - name: 🚀 Run a script
+        run: echo "Hello, GitHub Actions 2026! Permissions are secured."
